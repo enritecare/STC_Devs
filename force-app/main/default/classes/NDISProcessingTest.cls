@@ -19,7 +19,7 @@ private class NDISProcessingTest {
     static void testNDISGenerateBatch() {
 
         List<enrtcr__Support_Delivered__c> sdList = testDataFactory.createServiceDeliveredList('Test Site','NDIS','Fee for Service',10);
-        sdList
+        insert sdList;
 
         enrtcr__Extract__c extract = testDataFactory.createExtract(System.today().addDays(-30), System.today().addDays(30), 'NDIS');
         insert extract;
